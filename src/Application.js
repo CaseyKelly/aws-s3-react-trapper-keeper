@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import './Application.css';
+import S3Image from './S3Image';
+
+import { Storage } from 'aws-amplify';
 
 class Application extends Component {
   state = {
     files: []
   };
+
+  async componentDidMount() {
+    const files = await Storage.list('');  
+    this.setState({ files });
+  }
 
   handleSubmit = event => {
     event.preventDefault();
@@ -26,7 +34,9 @@ class Application extends Component {
           <input className="full-width" type="submit" />
         </form>
         <section className="Application-images">
-
+          { this.state.files.map(file =>
+            <S3Image s3Key={file.key} key={file.key} />
+          ) }
         </section>
       </div>
     );
