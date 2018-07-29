@@ -10,7 +10,7 @@ class Application extends Component {
   };
 
   async componentDidMount() {
-    const files = await Storage.list('');  
+    const files = await Storage.list('');
     this.setState({ files });
   }
 
@@ -20,23 +20,23 @@ class Application extends Component {
     const file = this.fileInput.files[0];
     const { name } = file;
 
-    console.log(file, name);
+    Storage.put(name, file).then(response => {
+      console.log('Storage.put', { response });
+      this.setState({ files: [...this.state.files, response] });
+    });
   };
 
   render() {
     return (
       <div className="Application">
         <form className="NewItem" onSubmit={this.handleSubmit}>
-          <input
-            type="file"
-            ref={input => this.fileInput = input}
-          />
+          <input type="file" ref={input => (this.fileInput = input)} />
           <input className="full-width" type="submit" />
         </form>
         <section className="Application-images">
-          { this.state.files.map(file =>
-            <S3Image s3Key={file.key} key={file.key} />
-          ) }
+          {this.state.files.map(file => {
+            return <S3Image s3Key={file.key} key={file.key} />;
+          })}
         </section>
       </div>
     );
