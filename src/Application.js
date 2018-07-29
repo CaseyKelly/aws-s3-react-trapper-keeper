@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Application.css';
 import S3Image from './S3Image';
 
+import { withAuthenticator } from 'aws-amplify-react';
 import { Storage } from 'aws-amplify';
 
 class Application extends Component {
@@ -43,4 +44,4 @@ class Application extends Component {
   }
 }
 
-export default Application;
+export default withAuthenticator(Application);

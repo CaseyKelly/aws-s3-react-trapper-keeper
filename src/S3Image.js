@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Storage } from 'aws-amplify';
 
+Storage.configure({ level: 'private' });
+
 class S3Image extends Component {
   state = { src: null };
 
