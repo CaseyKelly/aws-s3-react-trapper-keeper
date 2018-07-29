@@ -2,6 +2,74 @@
 # yarn lockfile v1
 
 
+"@aws-amplify/analytics@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/analytics/-/analytics-1.0.3.tgz#5c027133597f34b58bcd548826fb3387a52a2d82"
+  dependencies:
+    "@aws-amplify/cache" "^1.0.3"
+    "@aws-amplify/core" "^1.0.3"
+    aws-sdk "2.198.0"
+    uuid "^3.2.1"
+
+"@aws-amplify/api@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/api/-/api-1.0.4.tgz#76ef6224fb92448d39002bc39ee8e1b8d6d2290a"
+  dependencies:
+    "@aws-amplify/auth" "^1.0.4"
+    "@aws-amplify/cache" "^1.0.3"
+    "@aws-amplify/core" "^1.0.3"
+    "@types/zen-observable" "^0.5.3"
+    axios "^0.17.0"
+    graphql "0.13.0"
+    zen-observable "^0.8.6"
+
+"@aws-amplify/auth@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/auth/-/auth-1.0.4.tgz#ce9cc618b29cdfc1e7fa07fc1323857fdb3bee4a"
+  dependencies:
+    "@aws-amplify/cache" "^1.0.3"
+    "@aws-amplify/core" "^1.0.3"
+    amazon-cognito-auth-js "^1.1.9"
+    amazon-cognito-identity-js "^2.0.19"
+
+"@aws-amplify/cache@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/cache/-/cache-1.0.3.tgz#a2df61a1d8eb22ed850e32d808c83d7a2287c094"
+  dependencies:
+    "@aws-amplify/core" "^1.0.3"
+
+"@aws-amplify/core@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/core/-/core-1.0.3.tgz#0d65ae5649c8f693c44c4c200e71d24e49894a40"
+  dependencies:
+    aws-sdk "2.198.0"
+    url "^0.11.0"
+
+"@aws-amplify/interactions@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/interactions/-/interactions-1.0.3.tgz#de18eb3e168129fc5d45564e03ce978ee6db8198"
+  dependencies:
+    "@aws-amplify/core" "^1.0.3"
+    aws-sdk "2.198.0"
+
+"@aws-amplify/pubsub@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/pubsub/-/pubsub-1.0.3.tgz#1c715c67cb2ffa838df0ea9f7018179dc249e789"
+  dependencies:
+    "@aws-amplify/core" "^1.0.3"
+    "@types/paho-mqtt" "^1.0.3"
+    "@types/zen-observable" "^0.5.3"
+    paho-mqtt "^1.0.4"
+    uuid "^3.2.1"
+    zen-observable "^0.8.6"
+
+"@aws-amplify/storage@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/storage/-/storage-1.0.3.tgz#ea137aceca08aa0897055880ae2c470083769286"
+  dependencies:
+    "@aws-amplify/core" "^1.0.3"
+    aws-sdk "2.198.0"
+
 "@types/paho-mqtt@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@types/paho-mqtt/-/paho-mqtt-1.0.3.tgz#2eda0886584e1e69551f5203934878c326fe3566"
@@ -101,9 +169,9 @@ amazon-cognito-auth-js@^1.1.9:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/amazon-cognito-auth-js/-/amazon-cognito-auth-js-1.2.0.tgz#637f044a3a6114d6d0a87b415157ea36f32431e8"
 
-amazon-cognito-identity-js@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/amazon-cognito-identity-js/-/amazon-cognito-identity-js-2.0.6.tgz#a98ab8df96e3f0205e0ddad5c75360fdfcd45e5b"
+amazon-cognito-identity-js@^2.0.19:
+  version "2.0.19"
+  resolved "https://registry.yarnpkg.com/amazon-cognito-identity-js/-/amazon-cognito-identity-js-2.0.19.tgz#0f64d861ff143630331a7e46f7a3c3a19b98c418"
   dependencies:
     buffer "4.9.1"
     crypto-browserify "1.0.9"
@@ -346,29 +414,26 @@ autoprefixer@^6.3.1:
     postcss "^5.2.16"
     postcss-value-parser "^3.2.3"
 
-aws-amplify-react@^0.1.47:
-  version "0.1.47"
-  resolved "https://registry.yarnpkg.com/aws-amplify-react/-/aws-amplify-react-0.1.47.tgz#c1d1ddc793d0bc7270f03bb8da213e750dffdaae"
+aws-amplify-react@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/aws-amplify-react/-/aws-amplify-react-1.0.4.tgz#fbc50fa575f9a6776fb1ae944e54014ae4a7a172"
   dependencies:
-    aws-amplify "^0.4.1"
+    aws-amplify "^1.0.4"
     qrcode.react "^0.8.0"
     regenerator-runtime "^0.11.1"
 
-aws-amplify@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/aws-amplify/-/aws-amplify-0.4.1.tgz#e3b2d2a3496133a69550f56c0ada191acbbe3d7a"
+aws-amplify@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/aws-amplify/-/aws-amplify-1.0.4.tgz#d06f9a3fc5b38296317f9985aa8461730a4e709d"
   dependencies:
-    "@types/paho-mqtt" "^1.0.3"
-    "@types/zen-observable" "^0.5.3"
-    amazon-cognito-auth-js "^1.1.9"
-    amazon-cognito-identity-js "^2.0.6"
-    aws-sdk "2.198.0"
-    axios "^0.17.0"
-    graphql "0.13.0"
-    paho-mqtt "^1.0.4"
-    url "^0.11.0"
-    uuid "^3.2.1"
-    zen-observable "^0.8.6"
+    "@aws-amplify/analytics" "^1.0.3"
+    "@aws-amplify/api" "^1.0.4"
+    "@aws-amplify/auth" "^1.0.4"
+    "@aws-amplify/cache" "^1.0.3"
+    "@aws-amplify/core" "^1.0.3"
+    "@aws-amplify/interactions" "^1.0.3"
+    "@aws-amplify/pubsub" "^1.0.3"
+    "@aws-amplify/storage" "^1.0.3"
 
 aws-sdk@2.198.0:
   version "2.198.0"
